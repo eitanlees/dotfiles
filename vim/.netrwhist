@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/eitanlees/Research/MUO/Programs'
-let g:netrw_dirhist_2='/Users/eitanlees/Research/MUO/Programs/V_edit_commits'
-let g:netrw_dirhist_3='/Users/eitanlees/website/Foundation/css'
-let g:netrw_dirhist_4='/Users/eitanlees/test'
-let g:netrw_dirhist_5='/Users/eitanlees/Research/MUO/Programs'
-let g:netrw_dirhist_6='/Users/eitanlees/Research/MUO/figures/figs/main'
-let g:netrw_dirhist_7='/Users/eitanlees/Research/MUO/Programs/jumps'
-let g:netrw_dirhist_8='/Users/eitanlees/Research/MUO/Programs/refactoring/jumps'
-let g:netrw_dirhist_9='/Users/eitanlees/.mutt'
+let g:netrw_dirhist_cnt =0
