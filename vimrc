@@ -250,7 +250,14 @@ augroup python_macros " {
       let w = expand("<cword>") . "??"
       :call g:ScreenShellSend(w)
     endfunction
-    autocmd FileType python map <LocalLeader>h :call GetHelp()<CR>
+    autocmd FileType python nnoremap <LocalLeader>h :call GetHelp()<CR>
+    
+    " Set working directory to current file's folder.
+    function SetWD()
+      let wd = '!cd ' . expand('%:p:h')
+      :call g:ScreenShellSend(wd)
+    endfunction
+    autocmd FileType python map <LocalLeader>sw :call SetWD()<CR>
 augroup END " }
 
     " " Open an ipython2 shell.
@@ -271,14 +278,6 @@ augroup END " }
     " " Start a profiling block to execute code in.
     " autocmd FileType python map <LocalLeader>pr
     "       \ :call g:ScreenShellSend('%%prun')<CR>
-
-    " " Set working directory to current file's folder.
-    " function SetWD()
-    "   let wd = '!cd ' . expand('%:p:h')
-    "   :call g:ScreenShellSend(wd)
-    " endfunction
-    " autocmd FileType python map <LocalLeader>sw :call SetWD()<CR>
-
 
     " " Get `dir` help for word under cursor.
     " function GetDir()
