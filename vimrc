@@ -286,7 +286,4 @@ augroup END " }
     "   :call g:ScreenShellSend(w)
     " endfunction
     " autocmd FileType python map <LocalLeader>d :call GetDir()<CR>
-
-
     " "-------------------------
-
