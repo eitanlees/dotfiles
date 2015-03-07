@@ -210,23 +210,30 @@ augroup END " }
 "     autocmd FileType markdown :nnoremap <leader>v :!/Applications/Skim.app/Contents/MacOS/Skim tmp/*.pdf &<CR><CR>
 " augroup END " }
 
-augroup python_macros " {
+augroup IDE_macros " {
     autocmd!
-    " Open an ipython shell.
-    autocmd FileType python :nnoremap <localleader>p :ScreenShell! ipython<CR>
+    " Open an ipython shell
+    autocmd FileType python : nnoremap <localleader>p : ScreenShell! ipython<CR>
+    " Open a julia shell
+    autocmd FileType julia  : nnoremap <localleader>j : ScreenShell! julia<CR>
+    " Open a R shell
+    autocmd FileType r      : nnoremap <localleader>r : ScreenShell! R<CR>
 
     " Close whichever shell is running.
-    autocmd FileType python :nnoremap <LocalLeader>q :ScreenQuit<CR>
+    autocmd FileType python,julia,r :nnoremap <LocalLeader>q :ScreenQuit<CR>
 
-    " Send current line to python and stay on line
-    autocmd FileType python :nnoremap <LocalLeader>r V:ScreenSend<CR>
+    " Send current line to shell and stay on line
+    autocmd FileType python,julia,r :nnoremap <LocalLeader>s V:ScreenSend<CR>
 
-    " Send current line to python and move to next line.
-    autocmd FileType python :nnoremap <LocalLeader>d V:ScreenSend<CR>j
+    " Send current line to shell and move to next line.
+    autocmd FileType python,julia,r :nnoremap <LocalLeader>d V:ScreenSend<CR>j
 
-    " Send visual selection to python and move to next line.
-    autocmd FileType python :vnoremap <LocalLeader>v :ScreenSend<CR>`>0j
+    " Send visual selection to shell and move to next line.
+    autocmd FileType python,julia,r :vnoremap <LocalLeader>v :ScreenSend<CR>`>0j
+augroup END " }
 
+augroup python_macros " {
+    autocmd!
     " Send a carriage return line to python.
     autocmd FileType python :nnoremap <LocalLeader>a :call g:ScreenShellSend("\r")<CR>
 
@@ -257,8 +264,9 @@ augroup python_macros " {
       let wd = '!cd ' . expand('%:p:h')
       :call g:ScreenShellSend(wd)
     endfunction
-    autocmd FileType python map <LocalLeader>sw :call SetWD()<CR>
+    autocmd FileType python nnoremap <LocalLeader>sw :call SetWD()<CR>
 augroup END " }
+
 
     " " Open an ipython2 shell.
     " autocmd FileType python map <LocalLeader>pp :ScreenShell! ipython2<CR>
