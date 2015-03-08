@@ -3,33 +3,29 @@ execute pathogen#infect()
 filetype plugin indent on
 filetype plugin on
 let mapleader=","  " leader is comma
+set modelines=1
 
 " Disablels Vi compatability
 set nocompatible
 
-" -------------------------------------
-" important
+" important {{{
 " -------------------------------------
     set pastetoggle=<leader>p " Binding for paste/nopaste mode
-
-" -------------------------------------
-" moving around, searching and patterns
+    " }}}
+" moving around, searching and patterns {{{
 " -------------------------------------
     set incsearch      " show match for partly typed search command
-
+    " }}}
+" tags {{{
 " -------------------------------------
-" tags
-" -------------------------------------
-
-" -------------------------------------
-" displaying text
+"  }}}
+" displaying text {{{
 " -------------------------------------
     set relativenumber " show relative line number
     " set number       " show absolute line number
     set wrap           " long lines wrap
-
-" -------------------------------------
-" syntax, highlighting and spelling
+    " }}}
+" syntax, highlighting and spelling {{{
 " -------------------------------------
     " Sets color 
     syntax enable 
@@ -42,9 +38,8 @@ set nocompatible
 
     " setting ',s' to toggle spell check
     nnoremap <leader>s :set spell!<CR>
-
-" -------------------------------------
-" multiple windows
+    " }}}
+" multiple windows {{{
 " -------------------------------------
     set splitbelow " a new window is put below the current one
     set splitright " a new window is put right of the current one
@@ -54,34 +49,27 @@ set nocompatible
     noremap <C-h> <C-w>h
     noremap <C-j> <C-w>j
     noremap <C-k> <C-w>k
-
+    " }}}
+" multiple tab pages {{{
 " -------------------------------------
-" multiple tab pages
+"  }}}
+" terminal {{{
 " -------------------------------------
-
+"  }}}
+" using the mouse {{{
 " -------------------------------------
-" terminal
+"  }}}
+" printing {{{
 " -------------------------------------
-
-" -------------------------------------
-" using the mouse
-" -------------------------------------
-
-" -------------------------------------
-" printing
-" -------------------------------------
-
-" -------------------------------------
-" messages and info
+"  }}}
+" messages and info {{{
 " -------------------------------------
     set showcmd        " show (partial) command keys in the status line
-
+" }}}
+" selecting text {{{
 " -------------------------------------
-" selecting text
-" -------------------------------------
-
-" -------------------------------------
-" editing text
+"  }}}
+" editing text {{{
 " -------------------------------------
     set textwidth=80   " line length above which to break a line
 
@@ -114,31 +102,27 @@ set nocompatible
     normal `<
     endfunction
     vnoremap <C-a> :call Incr()<CR>
-
-" -------------------------------------
-" tabs and indenting
+    " }}}
+" tabs and indenting {{{
 " -------------------------------------
     "Sets the indent spacing
     set tabstop=4      " number of spaces a <Tab> in the text stands for
     set softtabstop=4  " if non-zero, number of spaces to insert for a <Tab>
     set shiftwidth=4   " number of spaces used for each step of (auto)indent
     set expandtab      " expand <Tab> to spaces in Insert mode
-
-" -------------------------------------
-" folding
+    " }}}
+" folding {{{
 " -------------------------------------
     set foldnestmax=1 " maximum fold depth for when 'foldmethod' is 'indent' or 'syntax'
     " folding type: 'manual', 'indent', 'expr', 'marker' or 'syntax'
     nnoremap <leader>f :set fdm=indent<CR>
     " fold toggle
     nnoremap <Space> za
-
+    " }}}
+" diff mode {{{
 " -------------------------------------
-" diff mode
-" -------------------------------------
-
-" -------------------------------------
-" mapping
+"  }}}
+" mapping {{{
 " -------------------------------------
 
     " Mapping the command key to seimi colon and visversa
@@ -153,44 +137,31 @@ set nocompatible
 
     " NERDTree toggle
     nnoremap <leader>n :NERDTreeToggle<CR>
-    
-
+    " }}}
+" reading and writing files {{{
 " -------------------------------------
-" reading and writing files
+"  }}}
+" the swap file {{{
 " -------------------------------------
-
-" -------------------------------------
-" the swap file
-" -------------------------------------
-
-" -------------------------------------
-" command line editing
+"  }}}
+" command line editing {{{
 " -------------------------------------
     set wildmenu       " command-line completion shows a list of matches
-
-    " Latex macros for compiling and viewing
-
+" }}}
+" executing external commands {{{
 " -------------------------------------
-" executing external commands
+"  }}}
+" running make and jumping to errors {{{
 " -------------------------------------
-
+"  }}}
+" language specific {{{
 " -------------------------------------
-" running make and jumping to errors
+"  }}}
+" multi-byte characters {{{
 " -------------------------------------
-
+"  }}}
+" various {{{ 
 " -------------------------------------
-" language specific
-" -------------------------------------
-
-" -------------------------------------
-" multi-byte characters
-" -------------------------------------
-
-" -------------------------------------
-" various
-" -------------------------------------
-
-"-------------------------
 
 " ervandew/screen configuration to send commands to ipython.
 
@@ -198,11 +169,12 @@ let g:ScreenImpl = "Tmux"
 
 " My attempt to make some augroups
 "
-augroup latex_macros " {
+" Latex macros for compiling and viewing
+augroup latex_macros " {{{
     autocmd!
     autocmd FileType tex :nnoremap <leader>c :w<CR>:!mkdir -p tmp; latexmk -pdf -outdir=tmp %<CR>
     autocmd FileType tex :nnoremap <leader>v :!/Applications/Skim.app/Contents/MacOS/Skim tmp/*.pdf &<CR><CR>
-augroup END " }
+augroup END " }}}
 
 " augroup markdown_macros " {
 "     autocmd!
@@ -210,7 +182,7 @@ augroup END " }
 "     autocmd FileType markdown :nnoremap <leader>v :!/Applications/Skim.app/Contents/MacOS/Skim tmp/*.pdf &<CR><CR>
 " augroup END " }
 
-augroup IDE_macros " {
+augroup IDE_macros " {{{
     autocmd!
     " Open an ipython shell
     autocmd FileType python : nnoremap <localleader>p : ScreenShell! ipython<CR>
@@ -230,9 +202,9 @@ augroup IDE_macros " {
 
     " Send visual selection to shell and move to next line.
     autocmd FileType python,julia,r :vnoremap <LocalLeader>v :ScreenSend<CR>`>0j
-augroup END " }
+augroup END " }}}
 
-augroup python_macros " {
+augroup python_macros " {{{
     autocmd!
     " Send a carriage return line to python.
     autocmd FileType python :nnoremap <LocalLeader>a :call g:ScreenShellSend("\r")<CR>
@@ -265,7 +237,7 @@ augroup python_macros " {
       :call g:ScreenShellSend(wd)
     endfunction
     autocmd FileType python nnoremap <LocalLeader>sw :call SetWD()<CR>
-augroup END " }
+augroup END " }}}
 
 
     " " Open an ipython2 shell.
@@ -294,3 +266,6 @@ augroup END " }
     " endfunction
     " autocmd FileType python map <LocalLeader>d :call GetDir()<CR>
     " "-------------------------
+    " }}}
+
+" vim:foldmethod=marker:foldlevel=0
