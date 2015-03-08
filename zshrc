@@ -51,6 +51,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
 export PATH="/usr/texbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/MacGPG2/bin"
 export PATH="/Users/eitanlees/Applications/Julia-0.3.6.app/Contents/Resources/julia/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
