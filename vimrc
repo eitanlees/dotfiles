@@ -184,24 +184,26 @@ augroup END " }}}
 
 augroup IDE_macros " {{{
     autocmd!
-    " Open an ipython shell
-    autocmd FileType python : nnoremap <localleader>p : ScreenShell! ipython<CR>
-    " Open a julia shell
+    " Open a horizontal python shell
+    autocmd FileType python : nnoremap <localleader>-p : ScreenShell python<CR>
+    " Open a horizontal julia shell
+    autocmd FileType julia  : nnoremap <localleader>-j : ScreenShell julia<CR>
+    " Open a vertical python shell
+    autocmd FileType python : nnoremap <localleader>p : ScreenShell! python<CR>
+    " Open a vertical  julia shell
     autocmd FileType julia  : nnoremap <localleader>j : ScreenShell! julia<CR>
-    " Open a R shell
-    autocmd FileType r      : nnoremap <localleader>r : ScreenShell! R<CR>
 
     " Close whichever shell is running.
-    autocmd FileType python,julia,r :nnoremap <LocalLeader>q :ScreenQuit<CR>
+    autocmd FileType python,julia :nnoremap <LocalLeader>q :ScreenQuit<CR>
 
     " Send current line to shell and stay on line
-    autocmd FileType python,julia,r :nnoremap <LocalLeader>s V:ScreenSend<CR>
+    autocmd FileType python,julia :nnoremap <LocalLeader>[ V:ScreenSend<CR>
 
     " Send current line to shell and move to next line.
-    autocmd FileType python,julia,r :nnoremap <LocalLeader>d V:ScreenSend<CR>j
+    autocmd FileType python,julia :nnoremap <LocalLeader>d V:ScreenSend<CR>j
 
     " Send visual selection to shell and move to next line.
-    autocmd FileType python,julia,r :vnoremap <LocalLeader>v :ScreenSend<CR>`>0j
+    autocmd FileType python,julia :vnoremap <LocalLeader>v :ScreenSend<CR>`>0j
 augroup END " }}}
 
 augroup python_macros " {{{
