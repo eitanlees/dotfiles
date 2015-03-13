@@ -163,25 +163,17 @@ set nocompatible
 " various {{{ 
 " -------------------------------------
 
-" ervandew/screen configuration to send commands to ipython.
-
 let g:ScreenImpl = "Tmux"
 
 " My attempt to make some augroups
 "
-" Latex macros for compiling and viewing
 augroup latex_macros " {{{
     autocmd!
+    " Compile
     autocmd FileType tex :nnoremap <leader>c :w<CR>:!mkdir -p tmp; latexmk -pdf -outdir=tmp %<CR>
+    " View
     autocmd FileType tex :nnoremap <leader>v :!/Applications/Skim.app/Contents/MacOS/Skim tmp/*.pdf &<CR><CR>
 augroup END " }}}
-
-" augroup markdown_macros " {
-"     autocmd!
-"     autocmd FileType markdown :nnoremap <leader>c :w<CR>:!mkdir -p tmp; latexmk -pdf -outdir=tmp %<CR>
-"     autocmd FileType markdown :nnoremap <leader>v :!/Applications/Skim.app/Contents/MacOS/Skim tmp/*.pdf &<CR><CR>
-" augroup END " }
-
 augroup IDE_macros " {{{
     autocmd!
     " Open a horizontal python shell
@@ -205,7 +197,6 @@ augroup IDE_macros " {{{
     " Send visual selection to shell and move to next line.
     autocmd FileType python,julia :vnoremap <LocalLeader>v :ScreenSend<CR>`>0j
 augroup END " }}}
-
 augroup python_macros " {{{
     autocmd!
     " Send a carriage return line to python.
@@ -241,7 +232,16 @@ augroup python_macros " {{{
     autocmd FileType python nnoremap <LocalLeader>sw :call SetWD()<CR>
 augroup END " }}}
 
+" augroup markdown_macros " {
+"     autocmd!
+"     autocmd FileType markdown :nnoremap <leader>c :w<CR>:!mkdir -p tmp; latexmk -pdf -outdir=tmp %<CR>
+"     autocmd FileType markdown :nnoremap <leader>v :!/Applications/Skim.app/Contents/MacOS/Skim tmp/*.pdf &<CR><CR>
+" augroup END " }
 
+
+
+
+" Some other options for the python group
     " " Open an ipython2 shell.
     " autocmd FileType python map <LocalLeader>pp :ScreenShell! ipython2<CR>
 
