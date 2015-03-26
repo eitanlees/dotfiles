@@ -55,6 +55,9 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/usr/texbin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/opt/X11/bin:/usr/local/MacGPG2/bin"
 export PATH="/Users/eitanlees/Applications/Julia-0.3.6.app/Contents/Resources/julia/bin:$PATH"
+
+export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:$PATH"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
