@@ -21,6 +21,9 @@ alias latexmk='mkdir -p tmp; latexmk -pdf -outdir=tmp'
 # Git aliases
 alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
 
+# Todo
+alias t='todo.sh'
+
 # Open PDF's with Skim
 skim() {/Applications/Skim.app/Contents/MacOS/Skim $* &}
 
