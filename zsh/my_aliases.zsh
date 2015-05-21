@@ -23,6 +23,11 @@ alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
 
 # Todo
 alias t='todo.sh'
+alias ta='todo.sh add'
+alias gtd='todo.sh projectview'
+
+# Ranger 
+alias rg='ranger'
 
 # Open PDF's with Skim
 skim() {/Applications/Skim.app/Contents/MacOS/Skim $* &}

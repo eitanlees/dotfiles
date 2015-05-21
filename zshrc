@@ -64,7 +64,7 @@ export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.
 # export LANG=en_US.UTF-8
 
 export EDITOR='vim'
-export TODOTXT_DEFAULT_ACTION=ls
+export TODOTXT_DEFAULT_ACTION=projectview
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
