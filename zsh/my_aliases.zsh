@@ -37,3 +37,5 @@ vlc() {/Applications/VLC.app/Contents/MacOS/VLC $*}
 
 # Makes vim open nvim
 # vim() {nvim $*}
+
+alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"

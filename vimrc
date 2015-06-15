@@ -81,8 +81,11 @@ set nocompatible
     " Mapping escape to 'jk' 
     inoremap jk <esc>
 "  }}}
-" Powerline {{{
+" Flagship {{{
 " -------------------------------------
+set laststatus=2
+set showtabline=2
+set guioptions-=e
 "  }}}
 " CtrlP {{{
 " -------------------------------------
