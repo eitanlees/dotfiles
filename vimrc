@@ -5,6 +5,7 @@ filetype plugin on
 let mapleader=","  " leader is comma
 set modelines=1
 set nocompatible
+set cryptmethod=blowfish2
 
 " Ideas for new orgainization influenced by Doug Black
 " Colors {{{
@@ -66,6 +67,10 @@ set nocompatible
     nnoremap <Leader># yypv$r#
     nnoremap <Leader>" yypv$r"
 
+    " reformats the paragraph
+    nnoremap <leader>g vipgq
+
+    " sets indent folding, remove with zi
     nnoremap <leader>f :set fdm=indent<CR>
 
     " Remove trailing white space
@@ -80,6 +85,9 @@ set nocompatible
 
     " Mapping escape to 'jk' 
     inoremap jk <esc>
+
+    " Insert a TODO task as a commented line
+    nnoremap <Leader>t oTODO:<space><esc>:Commentary<CR>A
 "  }}}
 " Flagship {{{
 " -------------------------------------

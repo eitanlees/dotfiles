@@ -13,6 +13,8 @@ alias hide='defaults write com.apple.finder AppleShowAllFiles -bool false'
 alias zsh_alias='vim ~/.oh-my-zsh/custom/my_aliases.zsh'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias vimrc='vim ~/.vimrc'
+alias rand='vim ~/notes/random-thoughts.md'
+alias buy='vim ~/notes/things-to-buy.md'
 
 # Puts LaTeX output into a ./tmp/ directory
 alias pdflatex='mkdir -p tmp; pdflatex -output-directory tmp'
@@ -38,4 +40,7 @@ vlc() {/Applications/VLC.app/Contents/MacOS/VLC $*}
 # Makes vim open nvim
 # vim() {nvim $*}
 
-alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+
+# A SHAsum512 alias to match the gentoo install
+alias sha512sum="shasum -a 512"
