@@ -1,18 +1,17 @@
 # Simple enough
 alias c='clear'
 
-# Logong information for work computer
-alias work_login='echo Remeber you have to be on the Miami VPN before logging in;
-                  ssh -XY eitan@10.35.235.220 -p7343'
-
 # Allows hidden files to be viewed in Finder
 alias show_hidden='defaults write com.apple.finder AppleShowAllFiles -bool true'
 alias hide='defaults write com.apple.finder AppleShowAllFiles -bool false'
 
 # Short cuts to edit dot files
-alias zsh_alias='vim ~/.oh-my-zsh/custom/my_aliases.zsh'
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias myalias='vim ~/dotfiles/zsh/my_aliases.zsh'
+alias zshrc='vim ~/dotfiles/zshrc'
 alias vimrc='vim ~/.vimrc'
+alias tmux.conf='vim ~/dotfiles/tmux.conf'
+
+# alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias rand='vim ~/notes/random-thoughts.md'
 alias buy='vim ~/notes/things-to-buy.md'
 
@@ -20,16 +19,11 @@ alias buy='vim ~/notes/things-to-buy.md'
 alias pdflatex='mkdir -p tmp; pdflatex -output-directory tmp'
 alias latexmk='mkdir -p tmp; latexmk -pdf -outdir=tmp'
 
-# Git aliases
-alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
 
 # Todo
 alias t='todo.sh'
 alias ta='todo.sh add'
 alias gtd='todo.sh projectview'
-
-# Ranger 
-alias rg='ranger'
 
 # Open PDF's with Skim
 skim() {/Applications/Skim.app/Contents/MacOS/Skim $* &}
@@ -37,10 +31,18 @@ skim() {/Applications/Skim.app/Contents/MacOS/Skim $* &}
 # Opens files with VLC
 vlc() {/Applications/VLC.app/Contents/MacOS/VLC $*}
 
-# Makes vim open nvim
-# vim() {nvim $*}
+alias chrome='open -a "Google Chrome"'
 
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+# Common Typeos
+alias pc='cp'
+alias sl='ls'
+alias exti='exit' etix='exit' eitx='exit' etxi='exit' eixt='exit' 
+alias ecit='exit'
+alias oepn='open' opne='open'
 
-# A SHAsum512 alias to match the gentoo install
-alias sha512sum="shasum -a 512"
+# A full brew update
+alias bu='brew update; brew upgrade; brew cleanup; brew doctor'
+
+# Upgrade all python packages
+alias pip-update-all="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo -H pip install -U"
+alias pip3-update-all="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo -H pip3 install -U"
