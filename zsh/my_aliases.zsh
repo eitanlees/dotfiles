@@ -11,7 +11,7 @@ alias zshrc='vim ~/dotfiles/zshrc'
 alias vimrc='vim ~/.vimrc'
 alias tmux.conf='vim ~/dotfiles/tmux.conf'
 
-# alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias rand='vim ~/notes/random-thoughts.md'
 alias buy='vim ~/notes/things-to-buy.md'
 

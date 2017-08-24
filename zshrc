@@ -53,7 +53,7 @@ ZSH_CUSTOM=~/dotfiles/zsh
 plugins=(git osx terminalapp git-prompt brew battery colored-man colorize my-web-search)
 
 source $ZSH/oh-my-zsh.sh
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 
 # User configuration
 
