@@ -6,6 +6,7 @@ let mapleader=","  " leader is comma
 set modelines=1
 set nocompatible
 set clipboard=unnamed
+let g:tex_flavor = "latex"
 
 " Colors {{{
 " -------------------------------------

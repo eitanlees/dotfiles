@@ -1,4 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/eitanlees/dotfiles/zsh/plugins/example'
 let g:netrw_dirhist_2='/Users/eitanlees/dotfiles/zsh/plugins/my-web-search'
+let g:netrw_dirhist_3='/Users/eitanlees/sandbox/python_projects/weather/__pycache__'
+let g:netrw_dirhist_4='/Users/eitanlees/School/FSU/2017-fall/A-SAS/HW-05'
+let g:netrw_dirhist_5='/Users/eitanlees/sandbox/website/rebuild/resume/css'
+let g:netrw_dirhist_6='/Users/eitanlees/sandbox/eitanlees.github.io/_posts'
+let g:netrw_dirhist_7='/Users/eitanlees/sandbox/eitanlees.github.io/_includes'
+let g:netrw_dirhist_8='/Users/eitanlees/sandbox/eitanlees.github.io/_drafts'
+let g:netrw_dirhist_9='/Users/eitanlees/.emacs.d/auto-save-list'

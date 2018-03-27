@@ -63,8 +63,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/texbin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/opt/X11/bin:/usr/local/MacGPG2/bin:$PATH"
 # export PATH="$PATH:/Users/eitanlees/miniconda3/bin"
-export PATH="$PATH:/Users/eitanlees/anaconda3/bin"
-export PATH="/Users/eitanlees/Applications/Julia-0.3.6.app/Contents/Resources/julia/bin:$PATH"
+# export PATH="$PATH:/Users/eitanlees/anaconda3/bin"
+# export PATH="/Users/eitanlees/Applications/Julia-0.3.6.app/Contents/Resources/julia/bin:$PATH"
 
 export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:$PATH"
 
@@ -115,12 +115,18 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="/Users/eitanlees/bin:$PATH"
 
 export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/share/python:$PATH
+# export PATH=/usr/local/share/python:$PATH
 
-SPARK_HOME=/eitanlees/spark
+# SPARK_HOME=/eitanlees/spark
 
-export PATH="$SPARK_HOME/bin:$PATH"
+# export PATH="$SPARK_HOME/bin:$PATH"
 
+export PATH=~/anaconda3/bin:$PATH
+
+# Tensorflow GPU Install
+export LD_LIBRARY_PATH=/usr/local/cuda/lib
+export PATH=$PATH:/usr/local/cuda/bin
+export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
 # Welcome text
 # figlet Welcome
 #
