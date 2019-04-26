@@ -1,8 +1,16 @@
 # AVIT ZSH Theme
 
-PROMPT='
-$(_user_host)${_current_dir} $(git_prompt_info)
+# Dollar only prompt
+## ---------------------------------
+# PROMPT='$ '
+## ---------------------------------
+#
+# Original prompt
+## ---------------------------------
+PROMPT='$(_user_host)${_current_dir} $(git_prompt_info)
 %{$fg[green]%}❉ %{$reset_color%} '
+## ---------------------------------
+#
 # %{$fg[green]%}⚛%{$reset_color%} '
 
 RPROMPT='$(_vi_status)%{$(echotc UP 1)%}$(_git_time_since_commit) $(git_prompt_status) ${_return_status}%{$(echotc DO 1)%}'

@@ -1,6 +1,16 @@
 Dotfiles
 ========
 
+
+2019-04-26 08:40:23 
+--------------------
+
+I want to start over again with my development tools.
+
+
+Old
+---
+
 A repository to store my configurations and dotfiles
 
 ## Useful Links

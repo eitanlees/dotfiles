@@ -115,18 +115,30 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="/Users/eitanlees/bin:$PATH"
 
 export PATH=/usr/local/bin:$PATH
+
+export PYTHONPATH="/Users/eitanlees/miniconda3/bin/python"
+
+export PKG_CONFIG_PATH=/usr/local/Cellar/zlib/1.2.8/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
+
+
+
 # export PATH=/usr/local/share/python:$PATH
 
 # SPARK_HOME=/eitanlees/spark
 
 # export PATH="$SPARK_HOME/bin:$PATH"
 
-export PATH=~/anaconda3/bin:$PATH
+# Conda Stuff
+# -----------
+. /Users/eitanlees/miniconda3/etc/profile.d/conda.sh
+conda activate
+# export PATH=~/anaconda3/bin:$PATH
+# export PATH=~/miniconda3/bin:$PATH
 
 # Tensorflow GPU Install
-export LD_LIBRARY_PATH=/usr/local/cuda/lib
-export PATH=$PATH:/usr/local/cuda/bin
-export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
+# export LD_LIBRARY_PATH=/usr/local/cuda/lib
+# export PATH=$PATH:/usr/local/cuda/bin
+# export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
 # Welcome text
 # figlet Welcome
 #
