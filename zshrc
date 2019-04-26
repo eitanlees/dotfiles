@@ -1,19 +1,28 @@
-# if [ "$TMUX" = "" ]; then tmux; fi
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-# ZSH_THEME="pure"
-ZSH_THEME="atom-avit"
-# ZSH_THEME="avit"
-# ZSH_THEME="eitan"
-# ZSH_THEME="sjl"
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/eitanlees/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="avit"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -40,52 +49,39 @@ ZSH_THEME="atom-avit"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/dotfiles/zsh
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx terminalapp git-prompt brew battery colored-man colorize my-web-search)
+plugins=(git autojump)
 
 source $ZSH/oh-my-zsh.sh
-# source /usr/local/bin/virtualenvwrapper.sh
 
 # User configuration
 
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-
-
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/texbin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/opt/X11/bin:/usr/local/MacGPG2/bin:$PATH"
-# export PATH="$PATH:/Users/eitanlees/miniconda3/bin"
-# export PATH="$PATH:/Users/eitanlees/anaconda3/bin"
-# export PATH="/Users/eitanlees/Applications/Julia-0.3.6.app/Contents/Resources/julia/bin:$PATH"
-
-export PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:$PATH"
-
-
-export PATH="$PATH:/Users/eitanlees/sandbox/bash_projects/bin"
-
-
-# deal_II installation path
-
-export DEAL_II_DIR='/Applications/deal.II.app/Contents/Resources'
-
-
+export EDITOR='vim'
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# Python configuration
+# export PYTHONPATH="/Users/eitanlees/miniconda3/bin/python"
+. /Users/eitanlees/miniconda3/etc/profile.d/conda.sh
+conda activate
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-export EDITOR='vim'
-export TODOTXT_DEFAULT_ACTION=projectview
-# export TERM="xterm-256color"
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -96,49 +92,18 @@ export TODOTXT_DEFAULT_ACTION=projectview
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+# TODO: I should set up a personal custom zsh files within my dotfiles where I can config stuff
+#
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#MAIL=/var/spool/mail/john && export MAIL
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/Library/TeX/texbin:$PATH"
-export PATH="$PATH:/usr/local/go/bin"
-export PATH="/Users/eitanlees/bin:$PATH"
-
-export PATH=/usr/local/bin:$PATH
-
-export PYTHONPATH="/Users/eitanlees/miniconda3/bin/python"
-
-export PKG_CONFIG_PATH=/usr/local/Cellar/zlib/1.2.8/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
-
-
-
-# export PATH=/usr/local/share/python:$PATH
-
-# SPARK_HOME=/eitanlees/spark
-
-# export PATH="$SPARK_HOME/bin:$PATH"
-
-# Conda Stuff
-# -----------
-. /Users/eitanlees/miniconda3/etc/profile.d/conda.sh
-conda activate
-# export PATH=~/anaconda3/bin:$PATH
-# export PATH=~/miniconda3/bin:$PATH
-
-# Tensorflow GPU Install
-# export LD_LIBRARY_PATH=/usr/local/cuda/lib
-# export PATH=$PATH:/usr/local/cuda/bin
-# export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
-# Welcome text
-# figlet Welcome
-#
+alias c='clear'
+alias pdflatex='mkdir -p tmp; pdflatex -output-directory tmp'
+alias latexmk='mkdir -p tmp; latexmk -pdf -outdir=tmp'
+alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
