@@ -1,6 +1,11 @@
 Dotfiles
 ========
 
+
+2019-04-26 12:39:09
+--------------------
+I think I succesfully rebooted vim. I want to focus on having a more simple vimrc, and I think using vim-plug will help with managing packages. Now I need to slowly go through my old vimrc and figure out what I need/am missing. 
+
 2019-04-26 09:28:40 
 --------------------
 I believe my oh-my-zsh reboot is going well. I will now attempt the vim config. Note, I have left `TODO`
