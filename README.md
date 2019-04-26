@@ -1,10 +1,9 @@
 Dotfiles
 ========
 
-
 2019-04-26 09:28:40 
 --------------------
-I believe my zsh reboot is going well. I will now attempt the vim config. Note, I have left `TODO`
+I believe my oh-my-zsh reboot is going well. I will now attempt the vim config. Note, I have left `TODO`
 markers throughout of things that would be nice to add. 
 
 
@@ -15,14 +14,13 @@ I want to start over again with my development tools.
 
 I need to take notes about things I need to recover. 
 
-- Important aliases (added to bottom of )
-- the autojump j command (Done, oh-my-zsh packagge)
+- Important aliases (Done, added to bottom of `.zshrc`)
+- the autojump j command (Done, its a oh-my-zsh packagge)
 - python path, and conda stuff (Done, added two lines from previous config)
-- latexmk and other latex commands
 
 
-Old
----
+Old Version
+-----------
 
 A repository to store my configurations and dotfiles
 
