@@ -1,10 +1,3 @@
-" Automatic installation of vim plugins
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 
@@ -27,15 +20,14 @@ call plug#end()
 
 colorscheme badwolf
 
-" Vim defaults to plaintex. I only ever write LaTeX
-let g:tex_flavor = "latex"
-
-" ----------------------
-" I am fed up with tabs. 
-" ----------------------
 " show existing tab with 4 spaces width
 set tabstop=4
+
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
+
 " On pressing tab, insert 4 spaces
 set expandtab
+
+" Vim defaults to plaintex. I only ever write LaTeX
+let g:tex_flavor = "latex"
