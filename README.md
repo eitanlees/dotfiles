@@ -1,6 +1,25 @@
 Dotfiles
 ========
 
+Steps for setting up a new machine
+
+```bash
+git clone https://github.com/eitanlees/dotfiles.git
+cd ./dotfiles
+./makesymlinks.sh
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+Then launch vim and run 
+
+```vim
+:PlugInstall
+```
+
+quit and relaunch vim to check installation. You should then be up and running.
+
+
 
 2019-04-26 12:39:09
 --------------------
