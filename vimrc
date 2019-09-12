@@ -14,19 +14,13 @@ Plug 'SirVer/ultisnips'             " Snippet engine
 Plug 'tpope/vim-repeat'             " Smart repeating
 Plug 'honza/vim-snippets'           " Snippet library
 Plug 'tpope/vim-surround'           " Paren edits
-Plug 'scrooloose/nerdtree'          " File browser
 Plug 'tpope/vim-commentary'         " Block comments
 Plug 'junegunn/vim-easy-align'      " Alingment
 Plug 'terryma/vim-multiple-cursors' " Multiple cursors
-" Plug 'w0rp/ale'                     " Asynchronous lint engine
-" Plug 'tpope/vim-eunuch'             " Unix like features
-" Plug 'tpope/vim-fugitive'           " Git functionality
-" Plug 'davidhalter/jedi-vim'         " Auto completion
 
 " Language Specific Plugins
 
 Plug 'lervag/vimtex'
-Plug 'vim-ruby/vim-ruby'
 Plug 'pangloss/vim-javascript'
 Plug 'marshallward/vim-restructuredtext'
 
@@ -42,10 +36,5 @@ set shiftwidth=4 " when indenting with '>', use 4 spaces width
 " Vim defaults to plaintex. I only ever write LaTeX
 let g:tex_flavor = "latex"
 
-" ALE Config
-" let g:ale_enable=0 " Turn off linting by default
-" let g:ale_fixers = {
-" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-" \   'python': ['black'],
-" \   'javascript': ['eslint'],
-" \}
+" Set my personal snippet library
+let g:UltiSnipsSnippetsDir="~/dotfiles/my-snippets"
