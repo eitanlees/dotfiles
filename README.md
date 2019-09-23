@@ -19,6 +19,13 @@ Then launch vim and run
 
 quit and relaunch vim to check installation. You should then be up and running.
 
+If you would like to install [Oh-My-ZSH](https://ohmyz.sh/) then try running 
+
+```bach
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+but I haven't tested that yet.
 
 
 2019-04-26 12:39:09
