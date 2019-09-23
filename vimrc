@@ -38,3 +38,5 @@ let g:tex_flavor = "latex"
 
 " Set my personal snippet library
 let g:UltiSnipsSnippetsDir="~/dotfiles/my-snippets"
+let g:UltiSnipsSnippetDirectories=["UltiSnips","/Users/eitanlees/dotfiles/my-snippets" ]
+let g:UltiSnipsEditSplit='context'
