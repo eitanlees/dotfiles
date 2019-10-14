@@ -23,6 +23,7 @@ Plug 'terryma/vim-multiple-cursors' " Multiple cursors
 Plug 'lervag/vimtex'
 Plug 'pangloss/vim-javascript'
 Plug 'marshallward/vim-restructuredtext'
+Plug 'JuliaEditorSupport/julia-vim'
 
 call plug#end()
 
