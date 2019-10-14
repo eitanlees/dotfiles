@@ -108,3 +108,4 @@ alias pdflatex='mkdir -p tmp; pdflatex -output-directory tmp'
 alias latexmk='mkdir -p tmp; latexmk -pdf -outdir=tmp'
 alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="$PATH:/Applications/Julia-1.2.app/Contents/Resources/julia/bin"
