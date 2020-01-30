@@ -7,7 +7,7 @@ Steps for setting up a new machine
 git clone https://github.com/eitanlees/dotfiles.git
 cd ./dotfiles
 ./makesymlinks.sh
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
@@ -17,7 +17,7 @@ Then launch vim and run
 :PlugInstall
 ```
 
-quit and relaunch vim to check installation. You should then be up and running.
+quit and relaunch vim to check installation. You should then be up and running. See [vim-plug](https://github.com/junegunn/vim-plug) installation page if there is any trouble.
 
 If you would like to install [Oh-My-ZSH](https://ohmyz.sh/) then try running 
 
