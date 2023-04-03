@@ -12,6 +12,9 @@ return require('packer').startup(function(use)
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'mbbill/undotree'
     use 'tpope/vim-fugitive'
+    use 'junegunn/vim-easy-align'
+    use("folke/zen-mode.nvim")
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',

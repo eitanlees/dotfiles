@@ -7,3 +7,5 @@ vim.opt.shiftwidth = 4
 
 vim.hlsearch = false
 vim.incsearch = true
+
+vim.opt.wrap = false
