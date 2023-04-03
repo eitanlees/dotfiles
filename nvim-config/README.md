@@ -60,7 +60,7 @@ To install various LSP's use the `:LspInstall` command as needed.
 
 ### Keybindings
 
-|Key|Def|
+| Mappings       | Action                                               |
 |---|---|
 |`K`|Displays hover information about the symbol under the cursor in a floating window. |
 |`gd`|Jumps to the definition of the symbol under the cursor. |
