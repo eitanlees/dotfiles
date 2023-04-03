@@ -1,6 +1,21 @@
 Dotfiles
 ========
 
+
+2023-04-03:
+-----------
+
+Well the time has come where I feel the urge to mix it up and re-write my whole config. 
+
+This time with Neovim!
+
+I am using [ThePrimeagen's init.lua](https://youtu.be/w7i4amO_zaE) as a reference.
+
+
+
+Old Stuff:
+----------
+
 Steps for setting up a new machine
 
 ```bash
