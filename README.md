@@ -1,6 +1,19 @@
 Dotfiles
 ========
 
+2023-04-06:
+-----------
+
+Well that was quick. Today my boss granted me access to CoPilot using PyCharm. 
+
+I downloaded PyCharm-CE and installed the Vim and CoPilot plugin. Oh man, I am rocking. 
+
+Maybe I will use PyCharm for a while and leave all of this neovim stuff behind. 
+
+I don't know. I have been struggling getting everything configured just the way I want it. 
+
+PyCharm is pretty cool. 
+
 
 2023-04-03:
 -----------
