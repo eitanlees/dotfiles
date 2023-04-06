@@ -9,3 +9,5 @@ vim.hlsearch = false
 vim.incsearch = true
 
 vim.opt.wrap = false
+
+vim.g.netrw_banner = 0

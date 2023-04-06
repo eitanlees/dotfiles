@@ -5,16 +5,16 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use { 'nvim-telescope/telescope.nvim', branch = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} }
-    }
+    requires = { {'nvim-lua/plenary.nvim'} } }
     use {'luisiacc/gruvbox-baby', branch = 'main'}
     use 'tpope/vim-commentary'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'mbbill/undotree'
     use 'tpope/vim-fugitive'
     use 'junegunn/vim-easy-align'
-    use("folke/zen-mode.nvim")
-
+    use 'folke/zen-mode.nvim'
+    use { 'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true } }
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
