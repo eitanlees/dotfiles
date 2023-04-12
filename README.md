@@ -1,6 +1,14 @@
 Dotfiles
 ========
 
+2023-04-12:
+-----------
+
+I don't think my deep dive into neovim was for a loss. Vim will always be there. 
+The terminal will always be there. It is nice to have a nice set up. I could
+probably scale things way back. I am not really using the LSP much. I like the
+colors. Treesitter is nice. I will need to thing about what is a best setup. 
+
 2023-04-06:
 -----------
 
