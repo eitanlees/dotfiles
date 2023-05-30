@@ -1,6 +1,13 @@
 Dotfiles
 ========
 
+2023-05-30:
+-----------
+
+My vanilla vimrc needs a tune up. I've been working on remote servers a lot
+more recently and I need a clean basic setup. 
+
+
 2023-04-12:
 -----------
 
